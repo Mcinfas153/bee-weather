@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function LeftBar() {
     return (
-        <div>
+        <div className="leftbar pl-10 py-10">
             <div className="mb-5">
                 <img src="https://img.icons8.com/office/40/000000/cloud-lighting--v1.png" />
                 <p className="text-white font-extrabold text-xl">Fog</p>
