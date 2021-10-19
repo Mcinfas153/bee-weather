@@ -6,9 +6,17 @@ import RightBar from './component/RightBar';
 function App() {
   return (
     <div className="App">
-      <LeftBar />
-      <RightBar />
-      <BottomBar />
+      <div className="grid grid-cols-2">
+        <div className="bg-red-500 ">
+          <LeftBar />
+        </div>
+        <div className="bg-green-500">
+          <RightBar />
+        </div>
+      </div>
+      <div className="grid grid-cols-full bg-blue-500">
+        <BottomBar />
+      </div>
     </div>
   );
 }
