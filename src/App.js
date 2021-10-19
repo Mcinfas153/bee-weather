@@ -6,16 +6,19 @@ import RightBar from './component/RightBar';
 function App() {
   return (
     <div className="App h-screen bg-cover bg-center bg-app-background">
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-5 gap-5">
         <div className="px-10 py-5">
           <LeftBar />
+        </div>
+        <div className="col-span-3">
+
         </div>
         <div className="px-10 py-5">
           <RightBar />
         </div>
       </div>
       <div className="grid grid-cols-full">
-        <BottomBar />
+        {/* <BottomBar /> */}
       </div>
     </div>
   );
