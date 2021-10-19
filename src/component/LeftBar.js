@@ -8,7 +8,7 @@ export default function LeftBar(props) {
     return (
         <div className="font-poppins">
             <div className="mb-5">
-                <img src="https://img.icons8.com/office/40/000000/cloud-lighting--v1.png" />
+                <img src={`http://openweathermap.org/img/wn/${weather[0].icon}.png`} />
                 <p className="text-white font-black text-xl">{weather[0].main}</p>
                 <p className="text-white text-sm">{city.name}, {city.sys.country}</p>
             </div>
