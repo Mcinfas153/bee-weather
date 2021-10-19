@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'app-background': "url('../src/images/sunset.jpg')",
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'body': ['"Open Sans"'],
       }
     },
   },
