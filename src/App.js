@@ -7,27 +7,23 @@ import axios from './axios'
 function App() {
 
   const [city, setCity] = useState([])
-  const [latitude, setLatitude] = useState(0)
-  const [longitude, setLongitude] = useState(0)
 
-  async function fetchCity() {
+  async function fetchCity(latitude, longitude) {
     const response = await axios.get(`/weather?lat=${latitude}&lon=${longitude}&appid=cc1c4dad5fb0620d11eabe5d13b91bd8&units=metric`)
+    console.log(response)
     if (response.status === 200) {
       setCity(response.data)
     }
   }
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLatitude(position.coords.latitude);
-      setLongitude(position.coords.longitude);
+  function fetchWeather() {
+    navigator.geolocation.getCurrentPosition(async function (position) {
+      fetchCity(position.coords.latitude, position.coords.longitude)
     })
-  }, [])
+  }
 
   useEffect(() => {
-
-    fetchCity()
-
+    fetchWeather()
   }, [])
 
   return (
