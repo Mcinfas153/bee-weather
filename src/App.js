@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import LeftBar from './component/LeftBar';
 import RightBar from './component/RightBar';
+import BottomBar from './component/BottomBar';
 import axios from './axios'
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
         </div>
       </div>
       <div className="grid grid-cols-full">
-        {/* <BottomBar /> */}
+        <BottomBar/>
       </div>
     </div>
   );
