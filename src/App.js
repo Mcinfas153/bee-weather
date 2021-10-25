@@ -4,26 +4,27 @@ import LeftBar from './component/LeftBar';
 import RightBar from './component/RightBar';
 import BottomBar from './component/BottomBar';
 import axios from './axios'
+import keys from './config/appKeys';
 
 function App() {
 
   const [city, setCity] = useState([])
 
-  async function fetchCity(latitude, longitude) {
-    const response = await axios.get(`/weather?lat=${latitude}&lon=${longitude}&appid=cc1c4dad5fb0620d11eabe5d13b91bd8&units=metric`)
-    console.log(response)
-    if (response.status === 200) {
-      setCity(response.data)
-    }
-  }
-
-  function fetchWeather() {
-    navigator.geolocation.getCurrentPosition(async function (position) {
-      fetchCity(position.coords.latitude, position.coords.longitude)
-    })
-  }
-
   useEffect(() => {
+    async function fetchCity(latitude, longitude) {
+      const response = await axios.get(`/weather?lat=${latitude}&lon=${longitude}&appid=${keys.OPENWEATHER_KEY}&units=metric`)
+      //console.log(response)
+      if (response.status === 200) {
+        setCity(response.data)
+      }
+    }
+
+    function fetchWeather() {
+      navigator.geolocation.getCurrentPosition(async function (position) {
+        fetchCity(position.coords.latitude, position.coords.longitude)
+      })
+    }
+
     fetchWeather()
   }, [])
 

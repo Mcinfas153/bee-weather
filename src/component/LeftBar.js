@@ -20,13 +20,13 @@ export default function LeftBar(props) {
     return (
         <div className="font-poppins">
             <div className="mb-5">
-                <img src={icon} width={40} />
+                <img src={icon} width={40} alt="weather icon" />
                 <p className="text-white font-black text-xl">{climate}</p>
                 <p className="text-white text-sm">{city?.name}, {city?.sys?.country}</p>
             </div>
             <div className="">
                 <p className="text-white font-black text-3xl">{Math.round(main?.temp)}<span className="font-black">&#8451;</span></p>
-                <a className="text-white text-sm cursor-pointer">Change Location</a>
+                <p href="" className="text-white text-sm cursor-pointer">Change Location</p>
             </div>
         </div>
     )

@@ -7,10 +7,10 @@ export default function RightBar(props) {
 
     return (
         <div className="flex flex-col">
-            <InfoBox name="Humidity" value={`${weather?.humidity}%`} />
-            <InfoBox name="Air Pressure" value={`${weather?.pressure} PS`} />
-            <InfoBox name="Feels Like" value={`${Math.round(weather?.feels_like)}°C`} />
-            <InfoBox name="Wind Speed" value={`${Math.round(wind?.speed)}KM/H`} />
+            <InfoBox key="1" name="Humidity" value={`${weather?.humidity}%`} />
+            <InfoBox key="2" name="Air Pressure" value={`${weather?.pressure} PS`} />
+            <InfoBox key="3" name="Feels Like" value={`${Math.round(weather?.feels_like)}°C`} />
+            <InfoBox key="4" name="Wind Speed" value={`${Math.round(wind?.speed)}KM/H`} />
         </div>
     )
 }
