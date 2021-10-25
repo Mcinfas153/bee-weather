@@ -30,19 +30,19 @@ function App() {
 
   return (
     <div className="App h-screen bg-cover bg-center bg-app-background">
-      <div className="grid grid-cols-5 gap-5">
-        <div className="px-10 py-5">
+      <div className="grid grid-cols-1 md:grid-cols-5 md:gap-5 justify-items-center md:justify-items-start">
+        <div className="px-10 py-5 md:col-span-1">
           <LeftBar city={city} />
         </div>
         <div className="col-span-3">
 
         </div>
-        <div className="px-10 py-5">
+        <div className="px-5 md:px-10 py-5 md:col-span-1 justify-items-center md:justify-items-start">
           <RightBar weather={city.main} wind={city.wind} />
         </div>
       </div>
       <div className="grid grid-cols-full">
-        <BottomBar />
+        {<BottomBar />}
       </div>
     </div>
   );

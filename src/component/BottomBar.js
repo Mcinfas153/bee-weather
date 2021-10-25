@@ -30,7 +30,7 @@ export default function BottomBar() {
     }, [])
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mx-auto absolute bottom-10">
+        <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 gap-4 mx-auto absolute bottom-10 px-3">
             {
                 hours.map((hour, index) =>
                     (unixToHumanTime(hour?.dt) >= new Date().getHours() && unixToHumanTime(hour?.dt) <= new Date().getHours() + 5) &&
