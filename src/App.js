@@ -41,7 +41,7 @@ function App() {
         </div>
       </div>
       <div className="grid grid-cols-full">
-        <BottomBar/>
+        <BottomBar />
       </div>
     </div>
   );
