@@ -1,16 +1,16 @@
 import React from 'react'
 
 export default function InfoBox(props) {
-    const { name, value } = props
+    const { name, value, img } = props
 
     return (
-        <div className="infoBox font-poppins">
-            <div className="flex items-center p-3 md:p-2 justify-items-end">
-                <img src="https://img.icons8.com/metro/35/ffffff/humidity.png" alt="icon" className="mr-3" />
+        <div className="infoBox font-poppins bg-gray-50 bg-opacity-25 rounded px-8 py-3 mt-2 mr-1">
+            <div className="flex justify-end items-start">
                 <div className="">
-                    <p className="text-xs text-white font-medium text-center md:text-left">{name}</p>
-                    <p className="text-xl text-white font-black text-center md:text-left">{value}</p>
+                    <p className="text-xs text-white font-medium text-center md:text-end">{name}</p>
+                    <p className="text-medium text-white font-semibold text-center md:text-end">{value}</p>
                 </div>
+                <img src={img} alt="icon" className="ml-1.5" />
             </div>
         </div>
     )

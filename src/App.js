@@ -29,15 +29,12 @@ function App() {
   }, [])
 
   return (
-    <div className="App h-screen bg-cover bg-center bg-app-background">
-      <div className="grid grid-cols-1 md:grid-cols-5 md:gap-5 justify-items-center md:justify-items-start">
-        <div className="px-10 py-5 md:col-span-1">
+    <div className="App bg-cover bg-center bg-app-background">
+      <div className="md:flex md:justify-between md:items-baseline py-5 md:px-10 lg:px-20">
+        <div className="mb-10">
           <LeftBar city={city} />
         </div>
-        <div className="col-span-3">
-
-        </div>
-        <div className="px-5 md:px-10 py-5 md:col-span-1 justify-items-center md:justify-items-start">
+        <div className="">
           <RightBar weather={city.main} wind={city.wind} />
         </div>
       </div>
